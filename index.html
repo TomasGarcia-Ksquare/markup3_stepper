@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>markup3_stepper</title>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            text-align: center;
+            font-family: Arial;
+            background-color: gray;
+        }
+
+        .flexBoxSection {
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            align-items: center;
+            max-width: 100%;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .row {
+            flex-direction: row;
+        }
+
+        .flexBoxsteps {
+            display: flex;
+            height: auto;
+            background-color: rgba(211, 211, 211, 0.262);
+            text-align: center;
+            gap: 20px;
+            border-radius: 1em;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .flexBoxstep {
+            display: flex;
+            height: 80px;
+            gap: 20px;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circleStep {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 5em;
+        }
+
+        .complete {
+            background-color: rgb(104, 206, 172);
+            color: white;
+        }
+
+        .uncomplete {
+            background-color: white;
+
+        }
+
+        .numberStep {
+            font-weight: bold;
+        }
+
+        .textStep {
+            font-size: large;
+        }
+
+        .completeTxt {
+            color: rgb(104, 206, 172);
+
+        }
+
+        .toCompleteTxt {
+            color: rgb(60, 68, 159);
+
+        }
+
+        .inStep {
+            background-color: rgb(60, 68, 159);
+            color: white;
+        }
+
+        .flexBoxFormContent {
+            display: flex;
+            align-items: left;
+            text-align: left;
+        }
+
+        .flexBoxSize {
+            display: flex;
+            align-items: center;
+            max-width: min-content;
+            background-color: white;
+            padding: 50px;
+            border-radius: 1em;
+        }
+
+        .flexBoxFormInputs {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .flexBoxFormInputs.row {
+            gap: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        select {
+            font-family: inherit;
+            padding: 10px;
+            border-radius: .4em;
+            border: 1px solid lightgray;
+            font-size: 15px;
+        }
+
+        .select-dropdown {
+            width: 500px;
+        }
+
+        .grayTxt {
+            color: gray;
+        }
+
+        .flexBoxForm {
+            display: flex;
+            gap: 20px;
+        }
+
+        #input-checkbox1 {
+            accent-color: rgb(60, 68, 159);
+            transform: scale(1.5);
+        }
+
+        button {
+            background-color: rgb(60, 68, 159);
+            border: none;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: .5em;
+        }
+
+        .FlexBoxButtons{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .flexBoxFormInputs2{
+            display: flex;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section class="flexBoxSection column">
+
+        <div class="flexBoxSize column">
+
+            <div class="flexBoxsteps row">
+
+                <div class="flexBoxstep row">
+
+                    <div class="circleStep complete">
+                        <div class="numberStep">1</div>
+                    </div>
+                    <div class="textStep completeTxt">Cabin</div>
+                    <div class="lineStep completeTxt">&#9866;</div>
+
+                </div>
+
+                <div class="flexBoxstep row">
+
+                    <div class="circleStep inStep">
+                        <div class="numberStep">2</div>
+                    </div>
+                    <div class="textStep toCompleteTxt">Meals</div>
+                    <div class="lineStep toCompleteTxt">&#9867;</div>
+
+                </div>
+
+                <div class="flexBoxstep row">
+
+                    <div class="circleStep uncomplete">
+                        <div class="numberStep ">3</div>
+                    </div>
+                    <div class="textStep">Upgrades</div>
+                    <div class="lineStep">&#9867;</div>
+
+                </div>
+
+                <div class="flexBoxstep row">
+
+                    <div class="circleStep uncomplete">
+                        <div class="numberStep">4</div>
+                    </div>
+                    <div class="textStep">Payment</div>
+
+                </div>
+
+            </div>
+
+            <div class="flexBoxFormContent column">
+
+                <div>
+                    <h2>Meal Preferences</h2>
+                    <p class="grayTxt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil voluptate
+                        consequuntur vel, natus
+                        recusandae repellat, temporibus similique impedit a facilis atque officia accusamus! Delectus
+                        natus laboriosam ducimus ullam optio eveniet.</p>
+                </div>
+
+                <form class="flexBoxForm column">
+
+                    <div class="flexBoxFormInputs row">
+
+                        <div class="flexBoxFormInputs2 column">
+
+                            <label for="select-dropdown1" class="grayTxt"> Breakfast </label>
+                            <select id="select-dropdown1" class="select-dropdown">
+                                <option value="none">None</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+
+                        </div>
+
+                        <div class="flexBoxFormInputs2 column">
+
+                            <label for="select-dropdown2" class="grayTxt"> Drink </label>
+                            <select id="select-dropdown2">
+                                <option value="none">None</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="flexBoxFormInputs row">
+
+                        <div class="flexBoxFormInputs2 column">
+
+                            <label for="select-dropdown3" class="grayTxt"> Lunch </label>
+                            <select id="select-dropdown3" class="select-dropdown">
+                                <option value="none">None</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+
+                        </div>
+
+                        <div class="flexBoxFormInputs2 column">
+
+                            <label for="select-dropdown4" class="grayTxt"> Drink </label>
+                            <select id="select-dropdown4">
+                                <option value="none">None</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="flexBoxFormInputs row">
+
+                        <div class="flexBoxFormInputs2 column">
+
+                            <label for="select-dropdown5" class="grayTxt"> Dinner </label>
+                            <select id="select-dropdown5" class="select-dropdown">
+                                <option value="none">None</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+
+                        </div>
+
+                        <div class="flexBoxFormInputs2 column">
+
+                            <label for="select-dropdown6" class="grayTxt"> Drink </label>
+                            <select id="select-dropdown6">
+                                <option value="none">None</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div>
+
+                        <label for="input-checkbox1">
+                            <input type="checkbox" name="checkbox1" id="input-checkbox1"> I'd like dessert, too!</input>
+                        </label>
+
+                    </div>
+
+                    <div class="FlexBoxButtons row">
+
+                        <button>Back</button>
+                        <button>Continue</button>
+
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
